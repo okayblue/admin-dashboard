@@ -1,31 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
-body {
-  background-color: blueviolet;
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.main-container {
+.body {
+  display: flex;
+  height: 100%;
+}
+
+.site-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 5fr;
   height: 100vh;
+  grid-template-columns: 1fr 4fr;
 }
 
 .sidebar {
-  background-color:aqua;
-  grid-row: 1 / 3;
+  background-color:rgb(0, 195, 255);
+  grid-column-end: 2;
+  height: 100%;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.nav {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.nav li {
+  padding: 10px 0px 10px 0px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:link {
+  color: rgb(255, 255, 255);
+}
+
+.nav a:visited {
+  color: rgb(255, 255, 255);
+}
+
+.nav a:hover {
+  color: rgb(228, 228, 228);
+}
+
+.brand {
+  padding: 20px;
+  font-size: 1.8rem;
+  color: rgb(255,255,255);
+}
+
+.links, .settings {
+list-style-type: none;
+font-size: 2.2rem;
+color: rgb(255,255,255);
+}
+
+.links {
+  margin-bottom: 30px;
 }
 
 .header {
-  background-color: bisque;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.right_container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
 }
 
 .main-content {
-  background-color: blue;
-  grid-column: 2 / 3;
+  padding: 20px;
+  gap: 20px;
+  background-color: rgb(211, 211, 211);
+  display: grid;
+  grid-template-columns: 1fr 1fr .8fr;
+  grid-template-rows: .1fr;
+  grid-auto-rows: 2fr;
+}
+
+.card, .project-card {
+  border-radius: 10px;
+  min-height: 250px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, .2);
+  background: rgb(255,255,255);
+  overflow: auto;
+}
+
+.project-title {
+  grid-column: 1 / 2;
+  display: flex;
+}
+
+.stripe {
+  background-color: blueviolet;
+  width: 10px;
+  height: 100%;
+}
+
+.announcement-title {
+  grid-column: 3 / 4;
+}
+
+.left {
+  grid-column: 1 / 3;
+  grid-row-start: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.right {
+  grid-column: 3 / 4;
+  display: grid;
+  grid-template-rows: 1fr .1fr 1fr;
+}
+
+.left, .right {
+  gap: 20px;
+}
+
+.main-content h3 {
+  font-size: 1.8rem;
 }
