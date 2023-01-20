@@ -14,6 +14,7 @@ html {
 .body {
   display: flex;
   height: 100%;
+  font-size: 1.6rem;
 }
 
 .site-container {
@@ -63,7 +64,7 @@ html {
 
 .links, .settings {
 list-style-type: none;
-font-size: 2.2rem;
+font-size: 1.6rem;
 color: rgb(255,255,255);
 }
 
@@ -85,7 +86,7 @@ color: rgb(255,255,255);
 
 .main-content {
   padding: 20px;
-  gap: 20px;
+  /* gap: 30px; */
   background-color: rgb(211, 211, 211);
   display: grid;
   grid-template-columns: 1fr 1fr .8fr;
@@ -94,16 +95,38 @@ color: rgb(255,255,255);
 }
 
 .card, .project-card {
+  font-size: 1.6rem;
   border-radius: 10px;
-  min-height: 250px;
+  min-height: 275px;
   box-shadow: 0px 2px 4px rgb(0, 0, 0, .2);
   background: rgb(255,255,255);
   overflow: auto;
 }
 
+.project-card {
+  display: grid;
+  grid-template-columns: 2% 95%;
+}
+
+.card-flex-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card-text, .card-icons {
+  padding: 30px;
+}
+
+.card-text {
+  align-self: flex-start;
+}
+
+.card-icons {
+  align-self: flex-end;
+}
+
 .project-title {
   grid-column: 1 / 2;
-  display: flex;
 }
 
 .stripe {
@@ -129,7 +152,7 @@ color: rgb(255,255,255);
   grid-template-rows: 1fr .1fr 1fr;
 }
 
-.left, .right {
+.left, .right, .main-content {
   gap: 20px;
 }
 
