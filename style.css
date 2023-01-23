@@ -98,7 +98,7 @@ color: rgb(255,255,255);
   font-size: 1.6rem;
   border-radius: 10px;
   min-height: 275px;
-  box-shadow: 0px 2px 4px rgb(0, 0, 0, .2);
+  box-shadow: 0px 8px 8px rgb(0, 0, 0, .2);
   background: rgb(255,255,255);
   overflow: auto;
 }
@@ -165,6 +165,11 @@ color: rgb(255,255,255);
 .announcement-card, .trending-card {
   padding: 30px;
   max-height: 400px;
+  font-size: 1.5rem;
+}
+
+.announcement-card p, .trending-card p {
+  color: rgb(54, 54, 54);
 }
 
 hr {
@@ -172,4 +177,24 @@ hr {
   margin: auto;
   margin: 10px 0px 10px 0px;
   color: lightgrey;
+}
+
+.trending-section svg {
+  width: 100px;
+  height: 100px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.trending-username {
+  font-weight:900;
+  color:black !important;
+}
+
+.trending-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
 }
