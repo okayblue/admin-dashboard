@@ -6,10 +6,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --light-grey: rgb(211, 211, 211);
+  --primary-color:rgb(0, 195, 255);
+  --secondary-color: rgb(138, 43, 226);
+  --dark-grey:rgb(54, 54, 54);
+
+}
+
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-}
+}color
 
 .body {
   display: flex;
@@ -24,7 +34,7 @@ html {
 }
 
 .sidebar {
-  background-color:rgb(0, 195, 255);
+  background-color:var(--primary-color);
   grid-column-end: 2;
   height: 100%;
   min-width: 250px;
@@ -41,16 +51,34 @@ html {
   padding: 10px 0px 10px 0px;
 }
 
-.nav a {
+.icon, .brand img {
+  filter: invert(100%) sepia(1%) saturate(4725%) hue-rotate(19deg) brightness(123%) contrast(100%);
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.nav a, .brand {
   text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
 }
 
 .nav a:link {
-  color: rgb(255, 255, 255);
+  color: var(--white);
 }
 
 .nav a:visited {
-  color: rgb(255, 255, 255);
+  color: var(--white);
 }
 
 .nav a:hover {
@@ -59,14 +87,14 @@ html {
 
 .brand {
   padding: 20px;
-  font-size: 1.7rem;
-  color: rgb(255,255,255);
+  font-size: 1.4rem;
+  color: var(--white);
 }
 
 .links, .settings {
 list-style-type: none;
 font-size: 2rem;
-color: rgb(255,255,255);
+color: var(--white);
 }
 
 .links {
@@ -74,7 +102,7 @@ color: rgb(255,255,255);
 }
 
 .header {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -87,7 +115,7 @@ color: rgb(255,255,255);
 
 .main-content {
   padding: 20px;
-  background-color: rgb(211, 211, 211);
+  background-color: var(--light-grey);
   display: grid;
   grid-template-columns: 1fr 1fr .8fr;
   grid-template-rows: .1fr;
@@ -99,7 +127,7 @@ color: rgb(255,255,255);
   border-radius: 10px;
   min-height: 275px;
   box-shadow: 0px 8px 8px rgb(0, 0, 0, .2);
-  background: rgb(255,255,255);
+  background: var(--white);
   overflow: auto;
 }
 
@@ -131,7 +159,7 @@ color: rgb(255,255,255);
 }
 
 .stripe {
-  background-color: blueviolet;
+  background-color: var(--secondary-color);
   width: 10px;
   height: 100%;
 }
@@ -168,15 +196,15 @@ color: rgb(255,255,255);
   font-size: 1.5rem;
 }
 
-.announcement-card p, .trending-card p {
-  color: rgb(54, 54, 54);
+.trending-card p, .announcement-card p {
+  color: var(--dark-grey);
 }
 
 hr {
   width: 100%;
   margin: auto;
   margin: 10px 0px 10px 0px;
-  color: lightgrey;
+  color: var(--light-grey);
 }
 
 .trending-section svg {
