@@ -153,6 +153,11 @@ color: var(--white);
 .card-icons {
   align-self: flex-end;
 }
+.card-icons img {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
 
 .project-title {
   grid-column: 1 / 2;
