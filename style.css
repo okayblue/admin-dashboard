@@ -19,7 +19,7 @@
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-}color
+}
 
 .body {
   display: flex;
@@ -60,7 +60,7 @@ html {
   height: 50px;
 }
 
-.icon, .searchbar img {
+.icon, .searchbar img, .user img {
   width: 25px;
   height: 25px;
 }
@@ -68,9 +68,19 @@ html {
 .searchbar {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 5px;
+}
+
+.user {
+  font-size: 1.8rem;
+  font-weight:900;
+  gap: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .searchbar input {
@@ -81,6 +91,14 @@ html {
   border: none;
   padding: 10px;
   font-size: 1.6rem;
+}
+
+#profile-small {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--secondary-color);
+  padding: 2px;
+  border-radius: 50px;
 }
 
 .nav a, .brand {
@@ -122,8 +140,10 @@ color: var(--white);
 .header {
   background-color: var(--white);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 65px 10px 65px;
 }
 
 .right_container {
