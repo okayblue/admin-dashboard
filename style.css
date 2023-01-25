@@ -60,9 +60,27 @@ html {
   height: 50px;
 }
 
-.icon {
+.icon, .searchbar img {
   width: 25px;
   height: 25px;
+}
+
+.searchbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.searchbar input {
+  width: 90%;
+  height: 60%;
+  background: rgb(211, 211, 211);
+  border-radius: 60px;
+  border: none;
+  padding: 10px;
+  font-size: 1.6rem;
 }
 
 .nav a, .brand {
@@ -154,9 +172,9 @@ color: var(--white);
   align-self: flex-end;
 }
 .card-icons img {
+  margin-left: 15px;
   width: 25px;
   height: 25px;
-  margin-left: 15px;
 }
 
 .project-title {
